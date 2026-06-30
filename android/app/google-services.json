@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "77113329444",
+    "project_id": "alive-app-c254b",
+    "storage_bucket": "alive-app-c254b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77113329444:android:224ce6a2fac2b26bac95b1",
+        "android_client_info": {
+          "package_name": "com.example.alive_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP4gGFIf0MoMazryynr_NlDFJyvnWkzOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
