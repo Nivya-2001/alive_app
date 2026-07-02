@@ -1,3 +1,4 @@
+import 'package:alive_app/app/core/sizes/responsive_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'splash_controller.dart';
@@ -22,16 +23,19 @@ class SplashScreen extends GetView<SplashController> {
             );
           },
           child: Container(
-            width: 100,
-            height: 100,
+            width: 100.dp,
+            height: 100.dp,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(24),
-              gradient: const LinearGradient(
-                colors: [Color(0xFFA8E063), Color(0xFF1FA855)],
-              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.15),
+                  blurRadius: 40,
+                  spreadRadius: 2,
+                  offset: const Offset(0, 1),
+                ),
+              ],
             ),
-            child: const Icon(Icons.play_circle_fill,
-                color: Colors.white, size: 48),
+            child: Image.asset('assets/app_logo.png', fit: BoxFit.cover),
           ),
         ),
       ),

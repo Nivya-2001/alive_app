@@ -1,4 +1,7 @@
+import 'package:alive_app/app/core/sizes/responsive_extension.dart';
+import 'package:alive_app/app/core/theme/app_colors.dart';
 import 'package:alive_app/app/data/models/stream_model.dart';
+import 'package:alive_app/app/widgets/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class StreamCard extends StatelessWidget {
@@ -8,40 +11,47 @@ class StreamCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.circular(16.dp),
       child: Stack(
         fit: StackFit.expand,
         children: [
           Image.network(stream.imageUrl, fit: BoxFit.cover),
           Positioned(
-            top: 8,
-            left: 8,
+            top: 8.dp,
+            left: 8.dp,
             child: _pill('👁 ${stream.viewerCount}'),
           ),
           Positioned(
-            bottom: 8,
-            left: 8,
-            right: 8,
+            bottom: 8.dp,
+            left: 8.dp,
+            right: 8.dp,
             child: Row(
               children: [
-                const CircleAvatar(radius: 12, backgroundColor: Colors.white),
-                const SizedBox(width: 6),
+                CircleAvatar(radius: 12.dp, backgroundColor: Colors.white),
+                SizedBox(width: 6.dp),
                 Expanded(
-                  child: Text(stream.username,
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12)),
+                  child: CustomTextWidget(
+                    text: stream.username,
+                    textStyle: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 12.sp,
+                    ),
+                  ),
                 ),
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFC6E84C),
-                    borderRadius: BorderRadius.circular(20),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 8.dp,
+                    vertical: 4.dp,
                   ),
-                  child: const Text('+ Follow',
-                      style: TextStyle(fontSize: 10, color: Colors.black)),
+                  decoration: BoxDecoration(
+                    color: AppColors.accentGreen,
+                    borderRadius: BorderRadius.circular(20.r),
+                  ),
+                  child: CustomTextWidget(
+                    text: '+ Follow',
+                    textStyle: TextStyle(fontSize: 10.sp, color: Colors.black),
+                  ),
                 ),
               ],
             ),
@@ -52,12 +62,14 @@ class StreamCard extends StatelessWidget {
   }
 
   Widget _pill(String text) => Container(
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-        decoration: BoxDecoration(
-          color: Colors.black54,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Text(text,
-            style: const TextStyle(color: Colors.white, fontSize: 10)),
-      );
+    padding: EdgeInsets.symmetric(horizontal: 6.dp, vertical: 2.dp),
+    decoration: BoxDecoration(
+      color: Colors.black54,
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: CustomTextWidget(
+      text: text,
+      textStyle: TextStyle(color: Colors.white, fontSize: 10.sp),
+    ),
+  );
 }

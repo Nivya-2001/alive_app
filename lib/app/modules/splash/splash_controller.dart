@@ -29,7 +29,7 @@ class SplashController extends GetxController
     _navigateNext();
   }
 
-  Future<void> _navigateNext() async {
+ Future<void> _navigateNext() async {
     await Future.delayed(const Duration(milliseconds: 2500));
     final user = _authRepository.currentUser;
     if (user != null) {

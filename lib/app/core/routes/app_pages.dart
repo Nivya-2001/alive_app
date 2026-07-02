@@ -1,10 +1,10 @@
+import 'package:alive_app/app/modules/main_screen/main_binding.dart';
+import 'package:alive_app/app/modules/main_screen/main_screen.dart';
 import 'package:get/get.dart';
 import '../../modules/splash/splash_screen.dart';
 import '../../modules/splash/splash_binding.dart';
 import '../../modules/login/login_screen.dart';
 import '../../modules/login/login_binding.dart';
-import '../../modules/home/home_screen.dart';
-import '../../modules/home/home_binding.dart';
 import 'app_routes.dart';
 
 class AppPages {
@@ -24,8 +24,8 @@ class AppPages {
     ),
     GetPage(
       name: Routes.home,
-      page: () => const HomeScreen(),
-      binding: HomeBinding(),
+      page: () => const MainScreen(),
+      binding: MainBinding(),
       transition: Transition.fadeIn,
     ),
   ];
