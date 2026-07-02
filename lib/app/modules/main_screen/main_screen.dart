@@ -1,4 +1,3 @@
-import 'package:alive_app/app/core/theme/app_colors.dart';
 import 'package:alive_app/app/modules/main_screen/main_screen_controller.dart';
 import 'package:alive_app/app/widgets/comming_soon_screen.dart';
 import 'package:alive_app/app/widgets/custom_bottom_nav_bar.dart';
